@@ -1,6 +1,6 @@
 #Reliazado a leitura de nomes e matricula
-#Realizado a operaÁ„o da equaÁ„o proposta - Grupo 1
-#Alunos: Luis Felipe de Souza, Arthur Lima, Jo„o pedro Oliveira, Renato Haniel e Victor Henrry
+#Realizado a opera√ß√£o da equa√ß√£o proposta - Grupo 1
+#Alunos: Luis Felipe de Souza, Arthur Lima, Jo√£o pedro Oliveira, Renato Haniel e Victor Henrry
 #Data: 12/12/2022
 
 #Leituras de String e Int puxadas do arquivo Atividade1-5.asm
@@ -10,7 +10,7 @@
  perguntaCOEFICIENTES: .asciiz "Informe os coeficientes (a, b, c ,d): "
  perguntaVARIAVEIS: .asciiz "Informe as variaveis independentes (x, y, z): "
  
- Resultado: .asciiz "Resultado da FunÁ„of(x,y,z): "
+ Resultado: .asciiz "Resultado da Fun√ß√£of(x,y,z): "
  	
  x: .asciiz"Informe o valor de x  :" 
  y: .asciiz"Informe o valor de y  :" 
@@ -52,7 +52,7 @@ main:
  j fim
  
 
- #Codigo para calcular a funÁ„o
+ #Codigo para calcular a fun√ß√£o
 .text
 Funcao_desafio:
 #Leitura dos coeficientes
@@ -81,7 +81,7 @@ Funcao_desafio:
  jal LerInt
  move $s1,$v0
 		
- #Leitura das vari√°veis
+ #Leitura das vari√É¬°veis
  la $a0, perguntaVARIAVEIS
  jal PrintString
 		
@@ -117,7 +117,7 @@ Funcao_desafio:
 
  #(5.a).(x.x.x.x)
  mult $t2,$t3     
- mflo $t2 #valor primeira operaÁ„o
+ mflo $t2 #valor primeira opera√ß√£o
 
  li $t0,3 #constatnte 3
 
@@ -132,10 +132,10 @@ Funcao_desafio:
 
  #(3.b).(x.x)
  mult $t4,$t5
- mflo $s7 #Valor segunda operaÁ„o
+ mflo $s7 #Valor segunda opera√ß√£o
 
  #((5.a).(x.x.x.x))-((3.b).(x.x))
- sub $t8,$t2,$s7 #Valor terceira operaÁ„o
+ sub $t8,$t2,$s7 #Valor terceira opera√ß√£o
 
  li $t7,7 #Contante 7
 
@@ -151,7 +151,7 @@ Funcao_desafio:
 
  # (7.c).(y.y.y)
  mult $t0,$t2
- mflo $t3 #Valor quarta operaÁ„p
+ mflo $t3 #Valor quarta opera√ß√£p
 
  li $s2,2
 
@@ -171,11 +171,11 @@ Funcao_desafio:
 #(2.d).z.z
  mult $s3,$t5
  mflo $s2
- mult $s2,$k0 #Transforma a operaÁ„o em negativo
- mflo $s2 #Valor quinta operaÁ„o
+ mult $s2,$k0 #Transforma a opera√ß√£o em negativo
+ mflo $s2 #Valor quinta opera√ß√£o
 
 #((7.c).(y.y.y))-((2.d).z.z)
- add $s3,$t3,$s2 #Valor Sexta operaÁ„o
+ add $s3,$t3,$s2 #Valor Sexta opera√ß√£o
 
  #((5.a).(x.x.x.x))-((3.b).(x.x))+((7.c).(y.y.y))-((2.d).z.z)
  add $s4,$t8,$s3
@@ -192,4 +192,4 @@ Funcao_desafio:
  jr $ra
 
 
-.include "C:\Users\Luis Pereira\Desktop\Trabalho2\Atividade1-5.asm" 
+.include ".\SubRotinas.asm" 
